@@ -11,7 +11,7 @@ exports.init = function () {
             }
             return true;
         }
-        throw 'Wrong Type Exception';
+        throw new TypeError('Wrong Type Exception');
     };
 
     Object.prototype.checkHasKeys = function (keys) {
@@ -36,7 +36,7 @@ exports.init = function () {
             }
             return true;
         }
-        throw 'Wrong Type Exception';
+        throw new TypeError('Wrong Type Exception');
     };
 
     Object.prototype.checkHasValues = function (values) {
@@ -53,7 +53,7 @@ exports.init = function () {
             }
             return false;
         }
-        throw 'Wrong Type Exception';
+        throw new TypeError('Wrong Type Exception');
     };
 
     Object.prototype.checkHasLength = function (length) {
@@ -61,7 +61,7 @@ exports.init = function () {
             Object.getPrototypeOf(this) == Array.prototype) {
             return (this.length == length);
         }
-        throw 'Wrong Type Exception';
+        throw new TypeError('Wrong Type Exception');
     };
 
     Function.prototype.checkHasParamsCount = function (count) {
